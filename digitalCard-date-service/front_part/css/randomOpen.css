@@ -135,7 +135,7 @@ html {
 
   .header__title{
     font-size: 1rem;
-    color: var(--color-white);
+    color: var(--color-black);
     text-align: center;
   }
   
@@ -297,4 +297,6 @@ button:hover {
   }
 
 }
+
+
 

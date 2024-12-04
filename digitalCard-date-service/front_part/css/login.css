@@ -14,6 +14,16 @@
   --color-text-variant: var(--color-DifferentGray);
 }
 
+/* animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* common */
 body, html {
   margin: 0;
@@ -51,6 +61,7 @@ body, html {
   width: 70px;
   height: auto;
   margin-bottom: 20px;
+  animation: spin 2s ease-in-out forwards;
 }
 
 .welcome-text {
@@ -145,12 +156,12 @@ body, html {
 }
 
 .check-icon {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: red;
 }
 
 .check__desc {
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   color: var(--color-deepGray);
   font-weight: 500;
 }

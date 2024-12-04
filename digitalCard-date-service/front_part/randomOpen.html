@@ -15,8 +15,7 @@
     <meta name="twitter:image" content="https://e293-203-246-85-181.ngrok-free.app/digitalCard-date-service/front_part/assets/teamLogo.png" />
     <link rel="stylesheet" href="./css/randomOpen.css">
     <link rel="shortcut icon" href="./assets/teamLogo.svg">
-    <script src="./src/randomOpen/open.js" type="module"></script>
-    <script src="./src/randomOpen/flip.js" type="module"></script>
+    <script src="./src/randomOpen/randomOpen.js" type="module"></script>
     <script src="./src/randomOpen/zoomIn.js" type="module"></script>
     <title>Card Opening(랜덤카드)</title>
 </head>
@@ -43,19 +42,19 @@
                             <img src="./assets/1.cuteDog.png" alt="동물 이미지">
                         </div>
                         <div class="card-info">
-                            <div class="info-row"><span class="label">성별 :</span><span class="value gender">랜덤</span></div>
-                            <div class="info-row hidden"><span class="label">이름 :</span><span class="value name">김야옹</span></div>
-                            <div class="info-row"><span class="label">학과 :</span><span class="value major">랜덤</span></div>
-                            <div class="info-row"><span class="label">학번(나이) :</span><span class="value studentID_age">랜덤</span></div>
-                            <div class="info-row"><span class="label">MBTI :</span><span class="value mbti">랜덤</span></div>
-                            <div class="info-row"><span class="label">취미 :</span><span class="value hobbies">랜덤</span></div>
-                            <div class="info-row hidden"><span class="label">연락처 :</span><span class="value contact">insta_id01</span></div>
+                            <div class="info-row"><span class="label">성별 :</span><span class="value gender"></span></div>
+                            <div class="info-row hidden"><span class="label">이름 :</span><span class="value name"></span></div>
+                            <div class="info-row"><span class="label">학과 :</span><span class="value major"></span></div>
+                            <div class="info-row"><span class="label">학번(나이) :</span><span class="value studentID_age"></span></div>
+                            <div class="info-row"><span class="label">MBTI :</span><span class="value mbti"></span></div>
+                            <div class="info-row"><span class="label">취미 :</span><span class="value hobbies"></span></div>
+                            <div class="info-row hidden"><span class="label">연락처 :</span><span class="value contact"></span></div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="button-container" aria-label="In order, buttons to request the first card, confirm, and request the second card.">
-                <button id="randomizeButton">명함오픈</button>
+                <button id="openButton">카드1오픈</button>
                 <button id="confirmButton" disabled>확정하기</button>
             </div>
             <button id="nextButton"><a href="./aiSimulation.html">다음페이지</a></button>
