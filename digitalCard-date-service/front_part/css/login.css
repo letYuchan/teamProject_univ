@@ -1,0 +1,229 @@
+/* Color */
+:root{
+  --color-coral: #FF6F61;
+  --color-peach: #FF8A80;
+  --color-gray: #F5F5F5;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-DifferentGray: #888888;
+  --color-deepGray: #333;
+  --color-primary: var(--color-white);
+  --color-primary-variant:var(--color-gray);
+  --color-accent: var(--color-coral);
+  --color-accent-variant: var(--color-peach);
+  --color-text-variant: var(--color-DifferentGray);
+}
+
+/* common */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; 
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto; 
+  scroll-behavior: smooth; 
+}
+
+/* 왼쪽 영역 */
+.left-wrap {
+  flex: 1;
+  background: linear-gradient(to bottom, var(--color-coral), var(--color-peach));
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.welcome-text {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+/* 오른쪽 영역 */
+.right-wrap {
+  flex: 1;
+  background: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 380px;
+  background: var(--color-white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--color-coral);
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.input-field label {
+  font-size: 0.9rem;
+  color: var(--color-deepGray);
+  margin-bottom: 8px;
+}
+
+.input-field input {
+  width: 95%;
+  padding: 12px;
+  border: 1px solid var(--color-deepGray);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  touch-action: manipulation;
+}
+
+.input-field input:focus {
+  border-color: var(--color-coral);
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
+  outline: none;
+}
+
+.btn {
+  background-color: var(--color-coral);
+  color: var(--color-white);
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  touch-action: manipulation; 
+}
+
+.btn:hover {
+  background-color: var(--color-peach);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0); 
+}
+
+.check__container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.check-icon {
+  font-size: 1.2rem;
+  color: red;
+}
+
+.check__desc {
+  font-size: 0.9rem;
+  color: var(--color-deepGray);
+  font-weight: 500;
+}
+
+/* responsive web */
+@media (max-width: 834px) {
+  .wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-wrap {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .welcome-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .right-wrap {
+    padding: 10px;
+  }
+
+  .login-container {
+    padding: 15px;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .login-title {
+    font-size: 1.2rem;
+  }
+
+  .input-field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .input-field label {
+    font-size: 1.2rem;
+  }
+
+  .input-field input {
+    font-size: 0.8rem;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px;
+    width: 50%;
+  }
+  .btn:active {
+    background-color: var(--color-peach);
+  }
+
+  .check__desc {
+    font-size: 1.5rem;
+  }
+
+  .check-icon {
+    font-size: 1rem;
+  }
+}
