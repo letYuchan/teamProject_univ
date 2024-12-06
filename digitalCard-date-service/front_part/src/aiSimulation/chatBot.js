@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setConfirmedCard(storedCard);
     } else {
         alert("확정한 카드가 존재하지 않습니다. 다시 뽑아주세요.");
-        window.location.href = "./Drawing.html";
+        // window.location.href = "./Drawing.html";
         
     }
 });

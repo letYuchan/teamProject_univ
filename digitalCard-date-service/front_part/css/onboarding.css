@@ -174,7 +174,7 @@ html {
   }
 
 .homeImg__Logo{
-    margin-top: 150px;
+    margin-top: 100px;
     width: 300px;
     height: 300px;
     @media (max-width: 834px){
@@ -248,19 +248,23 @@ html {
 
 /* ad */
 #ad{
+    padding-top: 50px;
     width: 100%;
     background-color: var(--color-primary-variant);
     padding-bottom: 100px;
     @media (max-width: 834px){
       padding: 0;
+      background-color: var(--color-primary);
     }
   }
 .ad-container{
+    margin-top: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     @media (max-width: 834px){
+      margin-top: 0;
       gap: 10px;
       flex-direction: column;    
     }
@@ -280,6 +284,7 @@ html {
     line-height: 30px;
     @media (max-width: 834px){
       text-align: center;
+      max-height: 500px;
     }
 }
 
@@ -370,11 +375,12 @@ html {
 
 /* steps */
 #step1{
-    margin-bottom: 70px;
+    margin: 150px 0;
     width: 100%;
     background-color: var(--color-primary);
     @media (max-width: 834px) {
-      margin-bottom: 0px;
+      margin: 0;
+      max-height: 800px;
     }
 }
 
@@ -396,11 +402,27 @@ html {
 }
 
 .step1-container, .step2-container, .step3-container{
-    margin: 0px;
+    margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+}
+
+.step2-container {
+  margin: 100px 0;
+}
+
+.step3-container{
+  margin-top: 50px;
+}
+
+.step1-container {
+  margin-top: 50px;
+  @media (max-width: 834px) {
+    margin-top: 0;
+    line-height: 35px;
+  }
 }
 
 .step__text-container{
@@ -428,9 +450,10 @@ html {
     display: block;
     text-align: center;
     white-space: pre-wrap;
-    content: "재학인증, 카드작성, 카드뽑기\A 3스텝으로 서비스 이용!";
+    content: "재학인증, 카드작성, 카드뽑기\A 3step으로 서비스 이용!";
     font-size: 2rem;
     padding-top: 20px;
+    max-height: 50px;
   }
 }
 
@@ -490,7 +513,7 @@ html {
 }
 
 .step3__content .step__title{
-    margin-top: 100px;
+    margin-top: 40px;
     @media (max-width: 834px){
       margin-top: 0;
     }
@@ -561,7 +584,7 @@ html {
     border-radius: 5px;
     padding: 5px;
     color: var(--color-white);
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     position: relative;
     right: 285px;
     top: -15px;
@@ -589,7 +612,11 @@ html {
 #start{
     width: 100%;
     background-color: var(--color-primary-variant);
-    padding: 50px;
+    padding: 170px;
+    @media (max-width: 834px) {
+      padding: 30px;
+      background-color: var(--color-primary);
+    }
 }
 
 .start-container{
@@ -622,7 +649,7 @@ html {
   display: none; 
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: var(--color-white); 
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
   @media (max-width: 834px){
@@ -651,6 +678,7 @@ html {
   background-size: cover;
   background-position: center;
   transform: rotateY(0deg); 
+  border-radius: 10px;
 }
 
 .start_card-back {
@@ -661,6 +689,8 @@ html {
   font-weight: bold;
   padding: 20px;
   box-sizing: border-box;
+  border-radius: 10px;
+
 }
 
 .start_cardButton {
@@ -703,7 +733,20 @@ html {
   -2px -2px 5px rgba(255, 255, 255, 0.3);
   font-style: italic;
   @media (max-width: 834px){
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 834px) {
+  .start_nextStep_desc::before {
+    visibility: visible;
+    display: block;
+    text-align: center;
+    white-space: pre-wrap;
+    content: "자.. 이제 떠나볼까요..\A운명의 상대를 만나러!";
     font-size: 1.5rem;
+    padding-top: 20px;
+    padding: 10px;
   }
 }
 
@@ -723,8 +766,24 @@ html {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
   @media (max-width: 834px) {
     transform: none;
+    box-shadow: none;
+    
   }
 }
+
+@media (max-width: 834px) {
+  .start_nextStep{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .start_nextStep:active{
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+
 
 #arrow-up {
   position: fixed;
@@ -747,9 +806,8 @@ html {
   opacity: 0.8;     
   @media (max-width: 834px) {
     font-size: 15px;
-    width: 40px;
-    height: 40px;
-    border-radius: 0;
+    width: 50px;
+    height: 50px;
   }     
 }
 
