@@ -69,7 +69,7 @@ startChatButton.addEventListener("click", () => {
     }
     modal.style.display = "none";
     chatBox.style.display = "block";
-    messages.innerHTML = `<div class="bot">안녕하세요! 저는 ${selectedCharacter}입니다.</div>`;
+    messages.innerHTML = `<div class="bot">안녕하세요! 저는 ${selectedCharacter}입니다.<br>Hello! I'm ${selectedCharacter}.</div>`;
 });
 
 // 메시지 전송 이벤트

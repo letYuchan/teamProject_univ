@@ -140,7 +140,7 @@
     margin: 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
     gap: 30px;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
     @media (max-width: 834px) {
         margin: 100px auto; 
         max-width: 100%;
@@ -184,7 +184,7 @@
   .draw_desc-ran{
     text-align: center;
     font-size: 1.2rem;
-    color: red;
+    color: #b22222;
     font-weight: bold;
     @media (max-width: 834px) {
       font-size: 1rem;
@@ -194,7 +194,7 @@
   .draw_desc-rec{
     text-align: center;
     font-size: 1.2rem;
-    color: blue;
+    color: #1E90FF ;
     font-weight: bold;
     @media (max-width: 834px) {
       font-size: 1rem;
@@ -215,13 +215,13 @@
   }
 
   .draw_randomButton{
-    border-color: red;
-    color: red;
+    border-color: #b22222;
+    color: #b22222;
   }
 
   .draw_recommendButton{
-    border-color: blue;
-    color: blue;
+    border-color: #1E90FF ;
+    color: #1E90FF ;
   }
 
   button:hover {
