@@ -13,8 +13,8 @@
     --color-text: #5d5d5d;
     --color-primary: var(--color-white);
     --color-primary-variant:var(--color-gray);
-    --color-accent: var(--color-coral);
-    --color-accent-variant: var(--color-peach);
+    --color-accent: var(--color-deep-pink);
+    --color-accent-variant: var(--color-hot-pink);
     --color-text-variant: var(--color-DifferentGray);
     --color-shadow: rgba(0, 0, 0, 0.1);
     --color-shadow-dark: rgba(0, 0, 0, 0.3);
@@ -111,7 +111,7 @@
  /* main */
 main {
     padding: 30px 20px;
-    background-color: var(--color-gray);
+    background-color: var(--color-primary-variant);
     animation: fadeIn 0.5s ease-in-out;
     display: flex;
     flex-direction: column; /* 큰 제목 -> 섹션 묶음 -> 버튼 */
@@ -136,7 +136,7 @@ main {
     max-width: 1100px;
     padding: 20px;
     border-radius: 30px;
-    background-color: var(--color-white);
+    background-color: var(--color-primary);
     box-shadow: 0 8px 15px var(--color-shadow-dark);
   }
   
@@ -167,7 +167,7 @@ main {
     max-width: 180px;
     padding: 15px 20px;
     border-radius: 10px;
-    background-color: var(--color-white);
+    background-color: var(--color-primary);
     color: var(--color-text);
     font-size: 1.2rem;
     cursor: pointer;
@@ -181,7 +181,7 @@ main {
   }
   
   .survey_section-container div[id].selected {
-    background-color: var(--color-hot-pink);
+    background-color: var(--color-accent);
     color: var(--color-white);
     box-shadow: 0 3px 8px var(--color-shadow-dark);
   }
@@ -193,14 +193,14 @@ main {
     border: 1px solid var(--color-differentGray);
     font-size: 0.8rem;
     color: var(--color-text);
-    background-color: var(--color-white);
+    background-color: var(--color-primary);
     box-shadow: 0 2px 5px var(--color-shadow);
   }
   
   input#hobby_input:focus {
     outline: none;
-    border-color: var(--color-coral);
-    box-shadow: 0 0 5px var(--color-peach);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 5px var(--color-accent-variant);
   }
   
   .survey_section-container.mbti {
@@ -219,18 +219,18 @@ main {
     font-size: 1.2rem;
     text-align: center;
     border-radius: 50%;
-    background-color: var(--color-white);
+    background-color: var(--color-primary);
     color: var(--color-text);
     box-shadow: 0 2px 5px var(--color-shadow);
   }
   
   .mbti-group div[id]:hover {
-    background-color: var(--color-peach);
+    background-color: var(--color-coral);
     color: var(--color-white);
   }
   
   .mbti-group div[id].selected {
-    background-color: var(--color-hot-pink);
+    background-color: var(--color-accent);
     color: var(--color-white);
     box-shadow: 0 3px 8px var(--color-shadow-dark);
   }
@@ -240,7 +240,7 @@ main {
     padding: 15px 30px;
     font-size: 1.4rem;
     color: var(--color-white);
-    background-color: var(--color-peach);
+    background-color: var(--color-accent-variant);
     border-radius: 30px;
     cursor: pointer;
     border: none;
@@ -249,11 +249,8 @@ main {
   }
   
   button#submitButton:hover {
-    background-color: var(--color-coral);
-  }
-  
-  button#submitButton:active {
-    background-color: var(--color-coral);
+    background-color: var(--color-accent);
+    transform: translateY(-2px);
   }
   
   /* contact */
@@ -298,7 +295,13 @@ main {
     font-size: 50px;
     color: var(--color-DifferentGray);
   }
-  
+
+  @media (max-width: 834px) {
+    .contact__SNS-container a:active{
+        color: var(--color-accent);
+    }
+  }
+ 
   .contact__SNS-container a:hover{
     color: var(--color-accent);
     @media (max-width: 834px){
@@ -315,12 +318,65 @@ main {
       display: none;
     }
   }
-  
-  @media(max-width: 834px){
-    button:active{
-      background-color: gold;
-      color: var(--color-white);
-      border: 2px solid var(--color-yellow);
+    
+  @media (max-width: 834px) {
+    #main {
+      padding: 20px 15px;
+      gap: 20px;
     }
+  
+    .survey_title {
+      font-size: 1.8rem;
+      padding-top: 20px;
+      text-align: center;
+    }
+  
+    form#survey-container {
+      flex-direction: column; /* 섹션을 세로로 배치 */
+      gap: 15px;
+      padding: 15px;
+    }
+  
+    .survey_section-container {
+      padding: 10px;
+      gap: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px var(--color-shadow);
+    }
+  
+    .survey_section_title {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+  
+    .survey_section-container div[id] {
+      padding: 10px 15px;
+      font-size: 1rem;
+      max-width: 100%; /* 버튼 크기 제한 제거 */
+    }
+  
+    .mbti-group div[id] {
+      padding: 10px;
+      font-size: 1rem;
+      max-width: 80px; /* 원형 크기를 줄여 모바일에서 잘 보이도록 */
+      border-radius: 50%;
+    }
+  
+    input#hobby_input {
+      padding: 10px 12px;
+      font-size: 0.9rem;
+    }
+  
+    button#submitButton {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      margin-top: 15px;
+    }
+
+    button#submitButton:active {
+        background-color: var(--color-accent);
+        transform: translateY(2px);
+      }
+      
   }
   

@@ -12,7 +12,7 @@
     --color-deep-pink: #ff577f;
     --color-primary: var(--color-white);
     --color-primary-variant:var(--color-gray);
-    --color-accent: var(--color-hot-soft-pink);
+    --color-accent: var(--color-deep-pink);
     --color-accent-variant: var(--color-hot-pink);
     --color-text-variant: var(--color-DifferentGray);
 }
@@ -369,7 +369,7 @@ html {
     transform: translateX(110%); 
     width: 100px; 
     background-color: #333; 
-    color: #fff; 
+    color: var(--color-white); 
     padding: 10px; 
     border-radius: 5px; 
     font-size: 12px;
@@ -523,6 +523,8 @@ html {
     }
 }
 
+
+
 .nextStepButton1{
     border: 1px solid var(--color-accent);
     background-color: var(--color-accent-variant);
@@ -531,9 +533,16 @@ html {
     color: var(--color-white);
     position: relative;
     right: 280px;
+    transition: all 0.2s ease-in-out;
     @media (max-width: 834px){
       display: none;
     }
+}
+
+.nextStepButton1:hover {
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent-variant);
+  transform: translateY(-2px);
 }
 
 .nextStepButton1:hover::after{
@@ -566,6 +575,12 @@ html {
     }
 }
 
+.nextStepButton2:hover {
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent-variant);
+  transform: translateY(-2px);
+}
+
 .nextStepButton2:hover::after{
     display: block;
     text-align: center;
@@ -595,6 +610,12 @@ html {
     @media (max-width: 834px){
       display: none;
     }
+}
+
+.nextStepButton3:hover {
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent-variant);
+  transform: translateY(-2px);
 }
 
 .nextStepButton3:hover::after{
@@ -688,7 +709,7 @@ html {
 .start_card-back {
   text-align: center;
   transform: rotateY(180deg);
-  background-color: var(--color-yello);
+  background-color: var(--color-white);
   color: var(--color-accent);
   font-size: 16px;
   font-weight: bold;
@@ -838,6 +859,7 @@ html {
 
 /* contact */
 #contact{
+  background-color: var(--color-primary);
   color: var(--color-text-variant);
 }
 .contact-container{
@@ -880,11 +902,17 @@ html {
 
 .contact__SNS-container a:hover{
   color: var(--color-accent);
-  @media (max-width: 834px) {
+  @media (max-width: 834px){
     color: none;
   }
 }
 
+@media (max-width: 834px) {
+  .contact__SNS-container a:active{
+      color: var(--color-accent);
+  }
+}
+           
 .contact_img{
   object-fit: cover;
   width: 120px;

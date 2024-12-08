@@ -20,8 +20,8 @@
     --color-deep-pink: #ff577f;
     --color-primary: var(--color-white);
     --color-primary-variant:var(--color-gray);
-    --color-accent: var(--color-coral);
-    --color-accent-variant: var(--color-peach);
+    --color-accent: var(--color-deep-pink);
+    --color-accent-variant: var(--color-hot-pink);
     --color-text-variant: var(--color-DifferentGray);
 }
 
@@ -275,7 +275,7 @@ html {
     gap: 20px;
 }
 button {
-  background: linear-gradient(135deg, #FFC1E3, #FF8A80); 
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-variant)); 
   color: var(--color-white); 
   font-size: 1.2rem;
   font-weight: bold;
@@ -288,15 +288,15 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(135deg, #FF8A80, #FFC1E3); 
+  background: linear-gradient(135deg, var(--color-accent-variant), var(--color-accent)); 
   transform: translateY(-3px); 
-  box-shadow: 0 8px 20px rgba(255, 105, 135, 0.5); 
+  box-shadow: 0 8px 20px var(--color-soft-pink); 
 }
 
 button:active {
-  background: linear-gradient(135deg, #FF6F61, #FF8A80); 
+  background: linear-gradient(135deg, var(--color-accent-variant), var(--color-accent)); 
   transform: translateY(0); 
-  box-shadow: 0 4px 8px rgba(255, 105, 135, 0.2); 
+  box-shadow: 0 4px 8px var(--color-soft-pink); 
 }
 
 #nextButton a {
@@ -305,9 +305,9 @@ button:active {
 
 @media(max-width: 834px){
   button:active{
-    background: linear-gradient(135deg, #FF8A80, #FFC1E3); 
+    background: linear-gradient(135deg, var(--color-accent-variant), var(--color-accent)); 
     transform: translateY(3px); 
-    box-shadow: 0 8px 20px rgba(255, 105, 135, 0.5); 
+    box-shadow: 0 8px 20px var(--color-soft-pink); 
   }
 }
 

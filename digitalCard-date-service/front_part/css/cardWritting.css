@@ -20,8 +20,8 @@
   --color-DifferentGray: #888888;
   --color-primary: var(--color-white);
   --color-primary-variant:var(--color-gray);
-  --color-accent: var(--color-coral);
-  --color-accent-variant: var(--color-peach);
+  --color-accent: var(--color-deep-pink);
+  --color-accent-variant: var(--color-hot-pink);
   --color-text-variant: var(--color-DifferentGray);
 }
 
@@ -273,6 +273,7 @@ html {
   }
 }
 
+
 @media (max-width: 834px) {
   .card_UX-topContainer {
     flex-direction: row; 
@@ -292,20 +293,37 @@ html {
 .submitButton:hover{
 transform: translateY(-2px); 
 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+background-color: var(--color-accent);
 @media (max-width: 834px) {
   transform: none;
   box-shadow: none;
+  background-color: none;
 }
 }
 
 .formCheckButton:hover{
   transform: translateY(-2px); 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+  background-color: var(--color-accent);
   @media (max-width: 834px) {
     transform: none;
     box-shadow: none;
+    background-color: none;
   }
   }
+
+  @media (max-width:834px) {
+    .submitButton:active{
+      transform: translateY(2px);
+      background-color: var(--color-accent);
+    }
+
+    .formCheckButton:active{
+      transform: translateY(2px);
+      background-color: var(--color-accent);
+    }
+  }
+  
 
 .color{
   width: 30px;
@@ -443,6 +461,18 @@ hr {
   cursor: pointer;
 }
 
+.modal-button:hover{
+  transform: translateY(-2px);
+  background-color: var(--color-accent);
+}
+
+@media (max-width: 834px) {
+  .modal-button:active{
+    transform: translateY(2px);
+    background-color: var(--color-accent);
+  }
+}
+
 /* contact */
 #contact{
   background-color: var(--color-primary);
@@ -492,6 +522,12 @@ hr {
     color: none;
   }
 }
+
+@media (max-width: 834px) {
+  .contact__SNS-container a:active{
+      color: var(--color-accent);
+  }
+}
            
 .contact_img{
   object-fit: cover;
@@ -500,13 +536,5 @@ hr {
   opacity: 0.5;
   @media (max-width: 834px){
     display: none;
-  }
-}
-
-@media(max-width: 834px){
-  button:active{
-    background-color: gold;
-    color: var(--color-white);
-    border: 2px solid var(--color-yellow);
   }
 }
