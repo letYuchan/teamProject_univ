@@ -7,10 +7,14 @@
   --color-black: #000000;
   --color-DifferentGray: #888888;
   --color-deepGray: #333;
+  --color-light-pink: #ffe9f0;
+  --color-hot-pink: #ff85a1;
+  --color-soft-pink: #ffd9e8;
+  --color-deep-pink: #ff577f;
   --color-primary: var(--color-white);
   --color-primary-variant:var(--color-gray);
-  --color-accent: var(--color-coral);
-  --color-accent-variant: var(--color-peach);
+  --color-accent: var(--color-hot-pink);
+  --color-accent-variant: var(--color-soft-pink);
   --color-text-variant: var(--color-DifferentGray);
 }
 

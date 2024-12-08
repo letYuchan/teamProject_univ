@@ -6,6 +6,10 @@
     --color-white: #ffffff;
     --color-black: #000000;
     --color-DifferentGray: #888888;
+    --color-light-pink: #ffe9f0;
+    --color-hot-pink: #ff85a1;
+    --color-soft-pink: #ffd9e8;
+    --color-deep-pink: #ff577f;
     --color-primary: var(--color-white);
     --color-primary-variant:var(--color-gray);
     --color-accent: var(--color-coral);

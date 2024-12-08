@@ -13,6 +13,10 @@
   --color-peach: #FF8A80;
   --color-gray: #F5F5F5;
   --color-black: #000000;
+  --color-light-pink: #ffe9f0;
+  --color-hot-pink: #ff85a1;
+  --color-soft-pink: #ffd9e8;
+  --color-deep-pink: #ff577f;
   --color-DifferentGray: #888888;
   --color-primary: var(--color-white);
   --color-primary-variant:var(--color-gray);
