@@ -5,6 +5,7 @@
     --color-gray: #F5F5F5;
     --color-white: #ffffff;
     --color-black: #000000;
+    --color-yellow: #feffbd;
     --color-DifferentGray: #888888;
     --color-light-pink: #ffe9f0;
     --color-hot-pink: #ff85a1;
@@ -39,6 +40,37 @@
     100% {
         color: var(--color-accent-variant)
     }
+}
+
+@keyframes glow {
+  0% {
+      box-shadow: 0 0 20px 5px rgba(255, 133, 161, 0.8), 
+                  0 0 30px 5px rgba(255, 133, 161, 0.6), 
+                  0 0 30px 8px rgba(255, 133, 161, 0.4);
+  }
+  50% {
+      box-shadow: 0 0 15px 5px rgba(255, 133, 161, 0.9), 
+                  0 0 25px 10px rgba(255, 133, 161, 0.7), 
+                  0 0 35px 15px rgba(255, 133, 161, 0.5);
+  }
+  100% {
+      box-shadow: 0 0 20px 8px rgba(255, 133, 161, 1), 
+                  0 0 30px 15px rgba(255, 133, 161, 0.8), 
+                  0 0 40px 23px rgba(255, 133, 161, 0.6);
+  }
+}
+
+
+@keyframes flicker {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.9;
+  }
+  75% {
+      opacity: 0.95;
+  }
 }
 
 /* common */
@@ -110,7 +142,7 @@ html {
   }
 
 .header__title{
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--color-black);
     text-align: center;
   }
@@ -231,13 +263,28 @@ html {
     border-radius: 5px;
     padding: 5px;
     color: var(--color-white);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .home__contact:hover{
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-accent-variant);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+  }
+
+  .home__nextStep:hover{
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-accent-variant);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
   }
 
 .home__nextStep:hover::after{
     display: block;
     content: "Go AD section"; 
     position: absolute;
-    left: 200px; 
+    right: 20px; 
     transform: translateX(110%); 
     height: 15px;
     width: 100px; 
@@ -355,9 +402,18 @@ html {
     border-radius: 5px;
     padding: 5px;
     color: var(--color-white); 
+    transition: all 0.2s ease-in-out;
     @media(max-width: 834px){
       display: none;
     } 
+  }
+
+  .ad__nextStep:hover{
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-accent-variant);
+    position: relative;
+    top: -2px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
   }
 
 .ad__nextStep:hover::after{
@@ -385,6 +441,9 @@ html {
     @media (max-width: 834px) {
       max-height: 800px;
       margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 }
 
@@ -523,8 +582,6 @@ html {
     }
 }
 
-
-
 .nextStepButton1{
     border: 1px solid var(--color-accent);
     background-color: var(--color-accent-variant);
@@ -543,6 +600,7 @@ html {
   background-color: var(--color-accent);
   border: 1px solid var(--color-accent-variant);
   transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .nextStepButton1:hover::after{
@@ -551,6 +609,7 @@ html {
     content: "Go step2 section"; 
     position: absolute;
     right: 20px;
+    bottom: 20px;
     transform: translateX(110%); 
     width: 150px; 
     background-color: #333; 
@@ -570,6 +629,7 @@ html {
     color: var(--color-white);
     position: relative;
     left: 270px;
+    transition: all 0.2s ease-in-out;
     @media (max-width: 834px){
       display: none;
     }
@@ -579,6 +639,7 @@ html {
   background-color: var(--color-accent);
   border: 1px solid var(--color-accent-variant);
   transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .nextStepButton2:hover::after{
@@ -586,7 +647,8 @@ html {
     text-align: center;
     content: "Go step3 section"; 
     position: absolute;
-    right: 230px; 
+    right: 230px;
+    bottom: 20px; 
     transform: translateX(110%); 
     width: 150px; 
     background-color: #333; 
@@ -607,6 +669,7 @@ html {
     position: relative;
     right: 285px;
     top: -15px;
+    transition: all 0.2s ease-in-out;
     @media (max-width: 834px){
       display: none;
     }
@@ -616,6 +679,7 @@ html {
   background-color: var(--color-accent);
   border: 1px solid var(--color-accent-variant);
   transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .nextStepButton3:hover::after{
@@ -624,6 +688,7 @@ html {
     content: "Go start section"; 
     position: absolute;
     right: 20px; 
+    bottom: 20px;
     transform: translateX(110%); 
     width: 100px; 
     background-color: #333; 
@@ -739,10 +804,16 @@ html {
 }
 
 .start_cardButton:hover {
-  color: var(--color-primary);
-  background-color: yellowgreen; 
+  background-color: var(--color-accent-variant); 
+  color: var(--color-white);
   transform: translateY(-3px); 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+  @media (max-width: 834px) {
+    background-color: none;
+    color: none;
+    transform: none;
+    box-shadow: none;
+  }
 }
 
 .start_cardButton:active {
@@ -782,24 +853,31 @@ html {
 }
 
 .start_nextStep {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.3s ease;
   border-radius: 50%;
-}
-
-.start_nextStep img {
   width: 300px;
   height: 300px;
-  object-fit: cover;
+  font-size: 3rem;
+  color: var(--color-accent);
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
 }
 
 .start_nextStep:hover {
-  transform: translateY(-3px); 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+  animation: glow 2s infinite alternate, flicker 0.1s infinite;
   @media (max-width: 834px) {
-    transform: none;
-    box-shadow: none;
-    
+    animation: none;
   }
+}
+
+.start_nextStep:active{
+  transform: none;
+  box-shadow: none;
 }
 
 @media (max-width: 834px) {
@@ -850,11 +928,19 @@ html {
   background-color: var(--color-accent);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2), 0 6px 8px rgba(0, 0, 0, 0.15);
   transform: translateY(-3px);
+  @media (max-width: 834px) {
+    background-color: none;
+    box-shadow: none;
+    transform: none;
+  }
 }
 #arrow-up:active {
-  
   transform: translateY(1px);
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+  @media (max-width: 834px) {
+    background-color: var(--color-accent);
+    transform: translateY(3px);
+  }
 }
 
 /* contact */

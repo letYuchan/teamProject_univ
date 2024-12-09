@@ -17,6 +17,7 @@
   --color-hot-pink: #ff85a1;
   --color-soft-pink: #ffd9e8;
   --color-deep-pink: #ff577f;
+  --color-point-pink: #fcb5d4;
   --color-DifferentGray: #888888;
   --color-primary: var(--color-white);
   --color-primary-variant:var(--color-gray);
@@ -96,7 +97,7 @@ html {
 }
 
 .header__title{
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--color-black);
   text-align: center;
 }
@@ -291,9 +292,8 @@ html {
 
 
 .submitButton:hover{
-transform: translateY(-2px); 
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
-background-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 @media (max-width: 834px) {
   transform: none;
   box-shadow: none;
@@ -302,9 +302,8 @@ background-color: var(--color-accent);
 }
 
 .formCheckButton:hover{
-  transform: translateY(-2px); 
+  transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
-  background-color: var(--color-accent);
   @media (max-width: 834px) {
     transform: none;
     box-shadow: none;
@@ -315,12 +314,12 @@ background-color: var(--color-accent);
   @media (max-width:834px) {
     .submitButton:active{
       transform: translateY(2px);
-      background-color: var(--color-accent);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
     }
 
     .formCheckButton:active{
       transform: translateY(2px);
-      background-color: var(--color-accent);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
     }
   }
   
@@ -457,7 +456,7 @@ hr {
   background-color: var(--color-accent-variant);
   color: var(--color-white);
   border: none;
-  border-radius: 4px;
+  border-radius: 30px;
   cursor: pointer;
 }
 

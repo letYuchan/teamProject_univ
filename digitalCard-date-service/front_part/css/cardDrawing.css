@@ -113,7 +113,7 @@
   }
 
   .header__title{
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--color-black);
     text-align: center;
   }
@@ -281,6 +281,10 @@
     }
 }
 
+.modal_loading{
+  color: var(--color-white);
+}
+
 .card-strip {
     position: absolute;
     width: 100%;
@@ -303,9 +307,13 @@
     color: var(--color-white);
     background-color: var(--color-accent-variant);
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+
+.drawButton:hover{
+  background-color: var(--color-accent);
 }
 
 @media (max-width: 834px) {

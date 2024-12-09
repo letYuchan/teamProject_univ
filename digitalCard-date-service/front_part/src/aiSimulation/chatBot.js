@@ -45,7 +45,7 @@ function setConfirmedCard(card) {
     personCard.querySelector("img").src = card.image;
     personCard.querySelector(".character-name").textContent = card.name;
     personCard.dataset.character = card.name;
-    personCard.dataset.description = `${card.age}살, ${card.mbti} 성격. ${card.hobbies}를 좋아합니다.`;
+    personCard.dataset.description = `${card.age}살, ${card.mbti} 성격. ${card.hobbies}을(를) 좋아합니다.`;
 
     // characterSettings에 추가
     characterSettings[card.name] = `You are ${card.name}, a ${card.age}-year-old individual with a ${card.mbti} personality. You enjoy ${card.hobbies}. Match the user's tone and respond naturally, avoiding overly formal expressions.`;

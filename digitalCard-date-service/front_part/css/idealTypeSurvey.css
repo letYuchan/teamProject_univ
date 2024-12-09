@@ -103,7 +103,7 @@
   }
   
   .header__title {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--color-black);
     text-align: center;
   }
@@ -176,8 +176,12 @@ main {
   }
   
   .survey_section-container div[id]:hover {
-    background-color: var(--color-coral);
+    background-color: var(--color-accent-variant);
     color: var(--color-white);
+    @media (max-width: 834px) {
+        background-color: none;
+        color: none;
+    }
   }
   
   .survey_section-container div[id].selected {
@@ -225,7 +229,7 @@ main {
   }
   
   .mbti-group div[id]:hover {
-    background-color: var(--color-coral);
+    background-color: var(--color-accent-variant);
     color: var(--color-white);
   }
   

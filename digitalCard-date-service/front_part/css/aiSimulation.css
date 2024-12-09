@@ -101,7 +101,7 @@ button{
 }
 
 .header__title{
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--color-black);
 }
 
@@ -135,8 +135,11 @@ body {
 }
 
 .title {
-  font-size: 24px;
+  font-size: 2.7rem;
   font-weight: bold;
+  @media (max-width: 834px) {
+    font-size: 2.5rem;
+  }
 }
 
 .character-list {
@@ -177,6 +180,7 @@ body {
 
 .character-card:hover {
   transform: scale(1.05);
+  background-color: #FFF4C2;
   @media (max-width: 834px) {
     transform: none;
   }
@@ -249,15 +253,15 @@ body {
   margin-bottom: 15px;
   background: transparent; 
   font-family: 'Poppins', sans-serif; 
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8; 
 }
 
 .user {
-  text-align: right;
-  color: var(--color-accent-variant); 
-  font-style: italic; 
-  margin-bottom: 10px;
+  text-align: right; 
+  color: var(--color-black);  
+  margin-bottom: 10px; 
+  font-weight: bold;
 }
 
 .bot {
@@ -282,15 +286,15 @@ body {
 
 #user-input:focus {
   outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 8px var(--color-soft-pink); 
+  border-color: #ffcc66;
+  box-shadow: 0 0 8px #ffcc66; 
 }
 
 #send-button {
   padding: 12px 20px;
   font-size: 14px;
   font-family: 'Poppins', sans-serif;
-  background: var(--color-accent-variant);
+  background-color: #ffcc66;
   color: var(--color-white);
   border: none;
   border-radius: 15px;
@@ -300,7 +304,7 @@ body {
 }
 
 #send-button:hover {
-  background: var(--color-accent); 
+  background-color: #fda800; 
   transform: translateY(-2px);
 }
 
@@ -354,7 +358,7 @@ body {
 .modal-button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: var(--color-accent-variant);
+  background-color:  #ffcc66;
   color: var(--color-white);
   border: none;
   border-radius: 30px;
@@ -362,7 +366,7 @@ body {
 }
 
 .modal-button:hover {
-  background-color: var(--color-accent);
+  background-color: #fda800;
 }
 
 /* survey link */
@@ -393,6 +397,7 @@ body {
 #contact{
   background-color: var(--color-primary);
   color: var(--color-text-variant);
+  font-family: 'Poppins', sans-serif;
 }
 .contact-container{
   display: flex;

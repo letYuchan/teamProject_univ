@@ -87,11 +87,10 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           body: JSON.stringify(surveyData),
         });
-  
         if (response.ok) {
           alert("전송 완료");
           setTimeout(() => {
-            window.location.href = "./cardWritting.html"; // 전송 후 이동
+            window.location.href = "./cardWriting.html"; // 전송 후 이동
           }, 500);
         } else {
           throw new Error("서버 응답 오류");

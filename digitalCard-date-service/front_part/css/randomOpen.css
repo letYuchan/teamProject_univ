@@ -28,21 +28,22 @@
 /* animation */
 @keyframes glow {
   0% {
-      box-shadow: 0 0 20px 5px rgba(255, 172, 164, 0.8), 
-                  0 0 30px 5px rgba(255, 172, 164, 0.6), 
-                  0 0 30px 8px rgba(255, 172, 164, 0.4);
+      box-shadow: 0 0 20px 5px rgba(255, 133, 161, 0.8), 
+                  0 0 30px 5px rgba(255, 133, 161, 0.6), 
+                  0 0 30px 8px rgba(255, 133, 161, 0.4);
   }
   50% {
-      box-shadow: 0 0 15px 5px rgba(255, 172, 164, 0.9), 
-                  0 0 25px 10px rgba(255, 172, 164, 0.7), 
-                  0 0 35px 15px rgba(255, 172, 164, 0.5);
+      box-shadow: 0 0 15px 5px rgba(255, 133, 161, 0.9), 
+                  0 0 25px 10px rgba(255, 133, 161, 0.7), 
+                  0 0 35px 15px rgba(255, 133, 161, 0.5);
   }
   100% {
-      box-shadow: 0 0 20px 8px rgba(255, 172, 164, 1), 
-                  0 0 30px 15px rgba(255, 172, 164, 0.8), 
-                  0 0 40px 23px rgba(255, 172, 164, 0.6);
+      box-shadow: 0 0 20px 8px rgba(255, 133, 161, 1), 
+                  0 0 30px 15px rgba(255, 133, 161, 0.8), 
+                  0 0 40px 23px rgba(255, 133, 161, 0.6);
   }
 }
+
 
 
 @keyframes flicker {
@@ -138,7 +139,7 @@ html {
   }
 
   .header__title{
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--color-black);
     text-align: center;
   }

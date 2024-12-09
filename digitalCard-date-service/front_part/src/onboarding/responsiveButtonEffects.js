@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     button.addEventListener('touchstart', function () {
         button.style.color = 'white';
-        button.style.transform = 'translateY(-3px)';
-        button.style.backgroundColor = 'yellowgreen';
+        button.style.transform = 'translateY(3px)';
+        button.style.backgroundColor = 'var(--color-accent-variant)';
         button.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.3)';
     });
 
